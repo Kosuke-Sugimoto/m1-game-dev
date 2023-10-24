@@ -2,26 +2,32 @@ import os
 import argparse
 import numpy as np
 from PIL import Image
+from tqdm import tqdm
+from omegaconf import OmegaConf
 
-TARGET = [
-    "bird", "cat", "dog", "fish",
-    "scorpion", "snake", "spider",
-    "sword", "tiger", "rifle", "leaf"
-]
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--target", type=str, nargs="*", default=TARGET)
+    parser.add_argument("--cfg_path", type=str, default="configs/base_config.yaml")
+    parser.add_argument("--npy_dir", type=str, default="dataset/Quickdraw-Dataset/npy")
+    parser.add_argument("--png_dir", type=str, default="dataset/Quickdraw-Dataset/png")
     args = parser.parse_args()
 
-    for now_trg in args.target:
-        npy_file = np.load(f"dataset/Quickdraw-Dataset/npy/{now_trg}.npy")
+    cfg = OmegaConf.load(args.cfg_path)
+    target_categories = cfg.target_categories
+
+    for now_trg in tqdm(target_categories):
+        npy_file = np.load(os.path.join(args.npy_dir, f"{now_trg}.npy"))
         npy_file = npy_file.reshape(-1, 28, 28)
 
-        for idx in range(len(npy_file)):
-            if idx == 0:
-                os.makedirs(f"dataset/Quickdraw-Dataset/png/{now_trg}", exist_ok=True)
+        now_trg_dir = os.path.join(args.png_dir, now_trg)
 
+        if os.path.exists(now_trg_dir):
+            continue
+        else:
+            os.makedirs(now_trg_dir)
+
+        for idx in tqdm(range(len(npy_file)), leave=False):
             img = npy_file[idx]
             img = Image.fromarray(img)
-            img.save(f"dataset/Quickdraw-Dataset/png/{now_trg}/{idx}.png")
+            img.save(os.path.join(now_trg_dir, f"{idx}.png"))
