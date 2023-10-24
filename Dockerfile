@@ -23,7 +23,8 @@ RUN pip install --upgrade pip \
     tqdm \
     wandb \
     omegaconf \
-    opencv-python
+    opencv-python \
+    scikit-learn
 
 # ==================== gsutil インストール ===========================
 # ubuntu の /bin/sh には source コマンドがないため、代わりに . を用いる
