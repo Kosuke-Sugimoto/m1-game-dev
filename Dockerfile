@@ -26,11 +26,12 @@ RUN pip install --upgrade pip \
     opencv-python
 
 # ==================== gsutil インストール ===========================
-# WORKDIR /tmp
-# RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-449.0.0-linux-x86_64.tar.gz
-# RUN tar -xf google-cloud-cli-449.0.0-linux-x86_64.tar.gz
-# RUN ./google-cloud-sdk/install.sh -y
-# RUN source /root/.bashrc
+# ubuntu の /bin/sh には source コマンドがないため、代わりに . を用いる
+WORKDIR /tmp
+RUN curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-449.0.0-linux-x86_64.tar.gz
+RUN tar -xf google-cloud-cli-449.0.0-linux-x86_64.tar.gz
+RUN ./google-cloud-sdk/install.sh --rc-path /root/.bashrc --path-update true --quiet
+RUN . /root/.bashrc
 # ===================================================================
 
 WORKDIR /work
