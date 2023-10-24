@@ -1,0 +1,7 @@
+train_batch_size: 32
+test_batch_size: 32
+ratio_split_train_test: 0.1
+num_workers: null
+num_channels: 3
+img_size: 128
+device: "cuda"
