@@ -24,7 +24,8 @@ RUN pip install --upgrade pip \
     wandb \
     omegaconf \
     opencv-python \
-    scikit-learn
+    scikit-learn \
+    onnx
 
 # ==================== gsutil インストール ===========================
 # ubuntu の /bin/sh には source コマンドがないため、代わりに . を用いる
