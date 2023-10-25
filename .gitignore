@@ -236,3 +236,4 @@ cython_debug/
 
 dataset/
 checkpoint/
+wandb/
