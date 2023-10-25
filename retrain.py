@@ -81,7 +81,7 @@ def retrain(model: Any,
     for epoch in tqdm(range(train_cfg.num_epochs)):
         epoch_loss = 0
 
-        for itr, data in tqdm(enumerate(train_dataloader), leave=False):
+        for itr, data in enumerate(tqdm(train_dataloader, leave=False)):
             imgs, labels = data
             imgs, labels = imgs.to(now_device), labels.to(now_device)
 
@@ -122,7 +122,7 @@ if __name__=="__main__":
 
     base_cfg = OmegaConf.load(args.base_cfg_path)
     train_cfg = OmegaConf.load(args.train_cfg_path)
-    
+
     args.checkpoint_dir = os.path.join(args.checkpoint_dir, args.run_name)
     os.makedirs(args.checkpoint_dir)
 
