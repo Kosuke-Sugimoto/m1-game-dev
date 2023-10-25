@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DOCKER_IMAGE_NAME=graffiti:v1
-DOCKER_CONTAINER_NAME=graffiti
+DOCKER_IMAGE_NAME=graffiti:v2
+DOCKER_CONTAINER_NAME=graffiti_v2
 CURRENT_WORKING_DIR=$(pwd)/
 DATASET_DIR=/mnt/hdd1/Datasets/Raw/
 CHECKPOINT_DIR=/mnt/hdd1/Checkpoints/
