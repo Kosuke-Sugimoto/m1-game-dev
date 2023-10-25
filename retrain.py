@@ -133,7 +133,7 @@ if __name__=="__main__":
     wandb.init(
         project=args.project_name,
         name=args.run_name,
-        config=dict(train_cfg)
+        config=dict(**train_cfg, **base_cfg)
     )
 
     model = mobilenet_v3_large(weights=MobileNet_V3_Large_Weights.DEFAULT)
