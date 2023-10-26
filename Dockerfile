@@ -16,8 +16,6 @@ RUN pip install --upgrade pip && pip install \
     omegaconf \
     opencv-python \
     scikit-learn \
-    model-compression-toolkit \
-    onnx \
-    onnx-tf
+    model-compression-toolkit 
 
 WORKDIR /work
