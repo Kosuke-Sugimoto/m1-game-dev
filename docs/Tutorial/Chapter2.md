@@ -16,6 +16,6 @@
 3. Project Location(ウィンドウの下)に日本語がないことを確認(記号も避けるべき)
 4. ProjectNameを入力
 5. 作成
-  
+
     Target Platformをmobileにするとレトロゲーム感が出る  
     Quality PresetをScalableにすることで2Dゲームと相性の悪いエフェクトを排除できる
