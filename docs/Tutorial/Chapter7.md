@@ -1,4 +1,4 @@
-# Chapter7
+# Chapter7<PaperCharacter作成>
 
 ## フリップブックを作成
 - FlipbookというSpriteを連番でアニメーションさせる機能の、形式データを用意する  

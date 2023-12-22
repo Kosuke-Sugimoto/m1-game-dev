@@ -1,4 +1,4 @@
-# Chapter8
+# Chapter8<ゲームモード>
 
 ## ゲームモードを作成
 1. Blueprintsフォルダの中で右クリック -> Blueprint Class -> Game Mode Base(ファイル名 : BP_Gamemode_2D)

@@ -1,4 +1,4 @@
-# Chapter5
+# Chapter5<テクスチャ・インポート・設定>
 
 ## コンテンツブラウザを開く
 1. Content Drower(左下) or Ctrl & Space  
