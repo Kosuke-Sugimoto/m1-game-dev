@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ArtDungeon.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\game-project\m1-game-dev\ArtDungeon\Intermediate\Build\Win64\x64\ArtDungeonEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"D:\game-project\m1-game-dev\ArtDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArtDungeon\ArtDungeon.cpp.obj"
+"D:\game-project\m1-game-dev\ArtDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArtDungeon\Default.rc2.res"
+/OUT:"D:\game-project\m1-game-dev\ArtDungeon\Intermediate\Build\Win64\x64\UnrealEditor\Development\ArtDungeon\UnrealEditor-ArtDungeon.lib"

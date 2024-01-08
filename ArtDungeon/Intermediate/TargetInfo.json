@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ArtDungeon",
+			"Path": "..\\Source\\ArtDungeon.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ArtDungeonEditor",
+			"Path": "..\\Source\\ArtDungeonEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
