@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"D:\\game-project\\m1-game-dev\\ArtDungeon\\Source\\ArtDungeon\\ArtDungeon.Build.cs",
-		"D:\\game-project\\m1-game-dev\\ArtDungeon\\Source\\ArtDungeon.Target.cs",
-		"D:\\game-project\\m1-game-dev\\ArtDungeon\\Source\\ArtDungeonEditor.Target.cs"
-	],
-	"EngineVersion": "5.3.2"
-}
